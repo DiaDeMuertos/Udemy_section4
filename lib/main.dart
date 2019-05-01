@@ -25,11 +25,26 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  void handleOnPressed() => print('Pressed');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        centerTitle: true,
+        actions: <Widget>[
+          IconButton(
+            onPressed: handleOnPressed,
+            tooltip: 'Just an Icon Buttom',
+            icon: Icon(Icons.filter_list),
+          ),
+          IconButton(
+            onPressed: handleOnPressed,
+            tooltip: 'Just an Icon Buttom',
+            icon: Icon(Icons.filter_drama),
+          )
+        ],
       ),
       body: Center(
         child: Column(
@@ -40,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => print('Pressed'),
+        onPressed: handleOnPressed,
         tooltip: 'Just a floating Button',
         child: Icon(Icons.play_arrow),
       ),
