@@ -38,3 +38,40 @@ List<BottomNavigationBarItem> customBottomNavigationBarItem() {
     )
   ];
 }
+
+List<Widget> customWidgetsList() {
+  return [
+    Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text('directions_railway'),
+        ],
+      ),
+    ),
+    Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text('directions_subway'),
+        ],
+      ),
+    ),
+    Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text('directions_bike'),
+        ],
+      ),
+    )
+  ];
+}
+
+List<Widget> customTabList() {
+  return [
+    Tab(icon: Icon(Icons.directions_railway)),
+    Tab(icon: Icon(Icons.directions_subway)),
+    Tab(icon: Icon(Icons.directions_bike)),
+  ];
+}
