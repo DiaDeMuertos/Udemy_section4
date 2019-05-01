@@ -12,7 +12,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: MyHomePage(title: 'Flutter & Dart'),
+      home: DefaultTabController(
+        length: 3,
+        child: MyHomePage(title: 'Flutter & Dart'),
+      ),
     );
   }
 }
@@ -41,6 +44,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        bottom: TabBar(
+          tabs: customTabList(),
+        ),
         title: Text(widget.title),
         centerTitle: true,
         actions: <Widget>[
@@ -54,13 +60,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(''),
-          ],
-        ),
+      body: TabBarView(
+        children: customWidgetsList(),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: handleOnPressed,
