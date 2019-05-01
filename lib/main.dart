@@ -27,7 +27,15 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  int _selectedIndex = 0;
+
   void handleOnPressed() => print('Pressed');
+
+  void handleOnTap(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -60,11 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Icon(Icons.play_arrow),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      bottomNavigationBar: BottomAppBar(
-        child: Container(
-          height: 50,
-          color: Colors.purple[50],
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: customBottomNavigationBarItem(),
+        currentIndex: _selectedIndex,
+        onTap: handleOnTap,
+        fixedColor: Colors.purple,
       ),
     );
   }

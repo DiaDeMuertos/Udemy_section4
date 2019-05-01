@@ -15,3 +15,26 @@ class CustomIconButton extends StatelessWidget {
     );
   }
 }
+
+List<BottomNavigationBarItem> customBottomNavigationBarItem() {
+  return [
+    BottomNavigationBarItem(
+      title: Text('Home'),
+      icon: Icon(
+        Icons.home,
+      ),
+    ),
+    BottomNavigationBarItem(
+      title: Text('Business'),
+      icon: Icon(
+        Icons.business,
+      ),
+    ),
+    BottomNavigationBarItem(
+      title: Text('School'),
+      icon: Icon(
+        Icons.school,
+      ),
+    )
+  ];
+}
