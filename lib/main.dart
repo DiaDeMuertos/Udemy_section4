@@ -39,6 +39,18 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => print('Pressed'),
+        tooltip: 'Just a floating Button',
+        child: Icon(Icons.play_arrow),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      bottomNavigationBar: BottomAppBar(
+        child: Container(
+          height: 50,
+          color: Colors.purple[50],
+        ),
+      ),
     );
   }
 }
