@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'helpers.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -34,16 +36,14 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(
+          CustomIconButton(
+            icon: Icons.filter_list,
             onPressed: handleOnPressed,
-            tooltip: 'Just an Icon Buttom',
-            icon: Icon(Icons.filter_list),
           ),
-          IconButton(
+          CustomIconButton(
+            icon: Icons.filter_drama,
             onPressed: handleOnPressed,
-            tooltip: 'Just an Icon Buttom',
-            icon: Icon(Icons.filter_drama),
-          )
+          ),
         ],
       ),
       body: Center(
