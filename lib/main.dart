@@ -40,6 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void handleDrawerOnTap() {
+    Navigator.pop(context);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,6 +63,11 @@ class _MyHomePageState extends State<MyHomePage> {
             onPressed: handleOnPressed,
           ),
         ],
+      ),
+      drawer: Drawer(
+        child: Column(
+          children: customDrawerList(onTap: handleDrawerOnTap),
+        ),
       ),
       body: TabBarView(
         children: customWidgetsList(),
