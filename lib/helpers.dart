@@ -75,3 +75,18 @@ List<Widget> customTabList() {
     Tab(icon: Icon(Icons.directions_bike)),
   ];
 }
+
+List<Widget> customDrawerList({Function onTap}) {
+  return <Widget>[
+    ListTile(
+      leading: Icon(Icons.alarm),
+      title: Text('Alarm'),
+      onTap: onTap,
+    ),
+    ListTile(
+      leading: Icon(Icons.history),
+      title: Text('History'),
+      onTap: onTap,
+    )
+  ];
+}

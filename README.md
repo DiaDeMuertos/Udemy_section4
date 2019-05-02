@@ -12,3 +12,4 @@
 - [BottomNavigationbar](https://docs.flutter.io/flutter/material/BottomNavigationBar-class.html)
 - [TabbarView](https://docs.flutter.io/flutter/material/TabBarView/TabBarView.html)
 - [Create the tabs](https://flutter.dev/docs/cookbook/design/tabs#2-create-the-tabs)
+- [Drawer](https://docs.flutter.io/flutter/material/Drawer-class.html)
