@@ -35,7 +35,7 @@ List<BottomNavigationBarItem> customBottomNavigationBarItem() {
       icon: Icon(
         Icons.school,
       ),
-    )
+    ),
   ];
 }
 
@@ -64,6 +64,9 @@ List<Widget> customWidgetsList() {
           Text('directions_bike'),
         ],
       ),
+    ),
+    CustomScrollView(
+      slivers: customSliversList(),
     )
   ];
 }
@@ -73,6 +76,7 @@ List<Widget> customTabList() {
     Tab(icon: Icon(Icons.directions_railway)),
     Tab(icon: Icon(Icons.directions_subway)),
     Tab(icon: Icon(Icons.directions_bike)),
+    Tab(icon: Icon(Icons.note_add))
   ];
 }
 
@@ -87,6 +91,35 @@ List<Widget> customDrawerList({Function onTap}) {
       leading: Icon(Icons.history),
       title: Text('History'),
       onTap: onTap,
+    )
+  ];
+}
+
+List<Widget> customSliversList() {
+  return [
+    SliverAppBar(
+      floating: false,
+      pinned: true,
+      expandedHeight: 150,
+      flexibleSpace: FlexibleSpaceBar(
+          centerTitle: true,
+          title: Text('Epic Sliver'),
+          background: Image.network(
+            "https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&h=350",
+            fit: BoxFit.cover,
+          )),
+    ),
+    SliverFixedExtentList(
+      itemExtent: 50,
+      delegate: SliverChildBuilderDelegate(
+        (BuildContext context, int index) {
+          return Container(
+            alignment: Alignment.center,
+            child: Text('index ${(index + 1)}'),
+          );
+        },
+        childCount: 20,
+      ),
     )
   ];
 }

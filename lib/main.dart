@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       home: DefaultTabController(
-        length: 3,
+        length: 4,
         child: MyHomePage(title: 'Flutter & Dart'),
       ),
     );

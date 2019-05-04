@@ -13,3 +13,4 @@
 - [TabbarView](https://docs.flutter.io/flutter/material/TabBarView/TabBarView.html)
 - [Create the tabs](https://flutter.dev/docs/cookbook/design/tabs#2-create-the-tabs)
 - [Drawer](https://docs.flutter.io/flutter/material/Drawer-class.html)
+- [SliverAppBar](https://docs.flutter.io/flutter/widgets/CustomScrollView-class.html)
